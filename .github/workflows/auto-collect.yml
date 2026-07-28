@@ -30,18 +30,40 @@ jobs:
                 | grep '"tag_name"' | sed 's/.*"v\([^"]*\)".*/\1/' | head -1)
           [ -z "$VER" ] && VER="1.19.27"
           echo "mihomo 版本: v${VER}"
-          wget -q "https://github.com/MetaCubeX/mihomo/releases/download/v${VER}/mihomo-linux-amd64-compatible-v${VER}.gz" \
-               -O mihomo.gz
-          gunzip mihomo.gz
+
+          URL="https://github.com/MetaCubeX/mihomo/releases/download/v${VER}/mihomo-linux-amd64-compatible-v${VER}.gz"
+          echo "下载地址: ${URL}"
+          if ! wget -q "${URL}" -O mihomo.gz; then
+            echo "⚠️  compatible 版本下载失败，尝试普通版本"
+            URL="https://github.com/MetaCubeX/mihomo/releases/download/v${VER}/mihomo-linux-amd64-v${VER}.gz"
+            echo "下载地址: ${URL}"
+            if ! wget -q "${URL}" -O mihomo.gz; then
+              echo "❌ mihomo 下载彻底失败，终止 workflow"
+              exit 1
+            fi
+          fi
+
+          # 校验下载文件确实是有效 gzip，不是 404 页面之类的东西
+          if ! gzip -t mihomo.gz 2>/dev/null; then
+            echo "❌ 下载的文件不是有效 gzip（可能是 404 页面），终止 workflow"
+            head -c 300 mihomo.gz || true
+            exit 1
+          fi
+
+          gunzip -f mihomo.gz
           chmod +x mihomo
-          ./mihomo -v
+
+          if ! ./mihomo -v; then
+            echo "❌ mihomo 二进制无法运行（可能架构不匹配），终止 workflow"
+            exit 1
+          fi
 
       - name: 自动发现 + 聚合 + 测速
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXTRA_SUBS: ${{ secrets.EXTRA_SUBS }}
         run: |
-          cat << 'EOF' > collect.py
+          cat << 'PYEOF' > collect.py
           import os, base64, json, time, socket, asyncio, subprocess, datetime
           import urllib.request, urllib.parse
           import yaml
@@ -68,6 +90,11 @@ jobs:
           TOP_N                  = 100
           MIHOMO_API             = "http://127.0.0.1:9090"
           MIHOMO_SECRET          = "AutoCollect2025"
+
+          # mihomo 启动检测参数（改进点：更长超时 + 真实 API 探测 + 进程存活检测）
+          MIHOMO_CONFIG_TEST_TIMEOUT = 30   # 秒，`mihomo -t` 配置校验超时
+          MIHOMO_START_TIMEOUT   = 30       # 秒，等待 API 就绪的总时长
+          MIHOMO_POLL_INTERVAL   = 0.5      # 秒，轮询间隔
 
           PREFIXES = ('vmess://', 'vless://', 'trojan://', 'ss://',
                       'hysteria2://', 'hy2://', 'tuic://')
@@ -715,6 +742,81 @@ jobs:
               return None
 
           # ================================================================
+          # mihomo 生命周期管理（改进点：配置校验 + 日志留存 + 真实 API 探测）
+          # ================================================================
+
+          def validate_mihomo_config(home_dir):
+              """用 `mihomo -t` 校验配置文件是否合法，返回 (ok, output)"""
+              try:
+                  r = subprocess.run(
+                      ['./mihomo', '-t', '-d', home_dir],
+                      capture_output=True, text=True,
+                      timeout=MIHOMO_CONFIG_TEST_TIMEOUT,
+                  )
+                  ok = (r.returncode == 0)
+                  output = (r.stdout or '') + (r.stderr or '')
+                  return ok, output
+              except subprocess.TimeoutExpired:
+                  return False, "mihomo -t 校验超时"
+              except Exception as e:
+                  return False, f"mihomo -t 校验异常: {e}"
+
+          def start_mihomo(home_dir):
+              """
+              启动 mihomo 并等待 API 就绪。
+              返回 (proc, ready, log_paths)。
+              失败时会打印日志尾部帮助排查，而不是静默降级。
+              """
+              stdout_path = os.path.join(home_dir, 'stdout.log')
+              stderr_path = os.path.join(home_dir, 'stderr.log')
+              log_out = open(stdout_path, 'w')
+              log_err = open(stderr_path, 'w')
+
+              proc = subprocess.Popen(
+                  ['./mihomo', '-d', home_dir],
+                  stdout=log_out, stderr=log_err,
+              )
+
+              ready = False
+              attempts = int(MIHOMO_START_TIMEOUT / MIHOMO_POLL_INTERVAL)
+              exited_early = False
+
+              for _ in range(attempts):
+                  # 进程是否已经退出（比纯 TCP 探测更早发现问题）
+                  if proc.poll() is not None:
+                      exited_early = True
+                      break
+                  try:
+                      req = urllib.request.Request(f"{MIHOMO_API}/version")
+                      req.add_header('Authorization', f'Bearer {MIHOMO_SECRET}')
+                      with urllib.request.urlopen(req, timeout=1) as r:
+                          if r.status == 200:
+                              ready = True
+                              break
+                  except Exception:
+                      pass
+                  time.sleep(MIHOMO_POLL_INTERVAL)
+
+              log_out.flush(); log_err.flush()
+              log_out.close(); log_err.close()
+
+              if not ready:
+                  reason = f"进程提前退出，退出码 {proc.returncode}" if exited_early \
+                      else f"等待 {MIHOMO_START_TIMEOUT}s 后 API 仍未就绪"
+                  print(f"⚠️  mihomo 启动失败（{reason}），降级使用 TCP 结果")
+                  for path, label in ((stderr_path, 'stderr'), (stdout_path, 'stdout')):
+                      try:
+                          with open(path, encoding='utf-8', errors='ignore') as f:
+                              tail = f.readlines()[-20:]
+                          if tail:
+                              print(f"---- mihomo {label} 最后 {len(tail)} 行 ----")
+                              print(''.join(tail))
+                      except Exception:
+                          pass
+
+              return proc, ready
+
+          # ================================================================
           # 主逻辑
           # ================================================================
 
@@ -830,8 +932,9 @@ jobs:
                       name_to_link[px['name']] = link
                       clash_proxies.append(px)
 
-              os.makedirs('mihomo_home', exist_ok=True)
-              with open('mihomo_home/config.yaml', 'w', encoding='utf-8') as f:
+              home_dir = 'mihomo_home'
+              os.makedirs(home_dir, exist_ok=True)
+              with open(os.path.join(home_dir, 'config.yaml'), 'w', encoding='utf-8') as f:
                   yaml.dump({
                       'mixed-port': 7888, 'external-controller': '127.0.0.1:9090',
                       'secret': MIHOMO_SECRET, 'log-level': 'silent',
@@ -839,26 +942,28 @@ jobs:
                       'proxies': clash_proxies, 'proxy-groups': [], 'rules': [],
                   }, f, allow_unicode=True, sort_keys=False)
 
-              proc = subprocess.Popen(['./mihomo', '-d', 'mihomo_home'],
-                                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-              ready = False
-              for _ in range(40):
-                  try:
-                      s = socket.create_connection(('127.0.0.1', 9090), timeout=0.5)
-                      s.close(); ready = True; break
-                  except Exception:
-                      time.sleep(0.3)
+              # 8a. 先校验配置，配置本身有问题（比如奇怪的节点字段）会在这里暴露，
+              #     而不是等进程静默失败之后才发现
+              cfg_ok, cfg_output = validate_mihomo_config(home_dir)
+              if not cfg_ok:
+                  print("⚠️  mihomo 配置校验未通过，降级使用 TCP 结果：")
+                  print(cfg_output[-2000:])
+                  ready = False
+                  proc = None
+              else:
+                  # 8b. 启动 mihomo 并真实探测 API（而不是只测 TCP 端口）
+                  proc, ready = start_mihomo(home_dir)
 
               best_links = []
               if not ready:
-                  print("⚠️  mihomo 启动超时，降级使用 TCP 结果")
                   best_links = tcp_candidates[:TOP_N]
               else:
                   time.sleep(0.5)
                   t0 = time.time()
                   http_results = run_http_stage(list(name_to_link.keys()))
                   print(f"   用时 {round(time.time()-t0, 1)}s")
-                  proc.terminate()
+                  if proc and proc.poll() is None:
+                      proc.terminate()
                   ok = sorted([(n, d) for n, d in http_results.items() if d],
                                key=lambda x: x[1])
                   print(f"✅ HTTP 可用: {len(ok)}/{len(clash_proxies)}")
@@ -901,9 +1006,21 @@ jobs:
 
           if __name__ == '__main__':
               main()
-          EOF
+          PYEOF
 
           python3 collect.py
+
+      - name: 上传 mihomo 日志（便于排查）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mihomo-logs
+          path: |
+            mihomo_home/stdout.log
+            mihomo_home/stderr.log
+            mihomo_home/config.yaml
+          if-no-files-found: ignore
+          retention-days: 3
 
       - name: 提交更新
         run: |
