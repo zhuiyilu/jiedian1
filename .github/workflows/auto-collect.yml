@@ -2,6 +2,14 @@ name: 自动发现 + 聚合 + 测速 + 筛选最佳100
 
 on:
   workflow_dispatch:
+    inputs:
+      runner:
+        description: >-
+          运行环境。默认用 GitHub 云端 runner（海外网络，只能验证节点服务器本身是否存活，
+          不能验证国内是否能连通）。如果你后续配置了国内的 self-hosted runner，
+          在这里填 self-hosted 即可切换，无需改代码。
+        required: false
+        default: 'ubuntu-latest'
   schedule:
     - cron: '0 */8 * * *'
 
@@ -10,7 +18,7 @@ permissions:
 
 jobs:
   collect:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.runner || 'ubuntu-latest' }}
     timeout-minutes: 35
 
     steps:
@@ -30,7 +38,6 @@ jobs:
                 | grep '"tag_name"' | sed 's/.*"v\([^"]*\)".*/\1/' | head -1)
           [ -z "$VER" ] && VER="1.19.27"
           echo "mihomo 版本: v${VER}"
-
           URL="https://github.com/MetaCubeX/mihomo/releases/download/v${VER}/mihomo-linux-amd64-compatible-v${VER}.gz"
           echo "下载地址: ${URL}"
           if ! wget -q "${URL}" -O mihomo.gz; then
@@ -42,17 +49,14 @@ jobs:
               exit 1
             fi
           fi
-
           # 校验下载文件确实是有效 gzip，不是 404 页面之类的东西
           if ! gzip -t mihomo.gz 2>/dev/null; then
             echo "❌ 下载的文件不是有效 gzip（可能是 404 页面），终止 workflow"
             head -c 300 mihomo.gz || true
             exit 1
           fi
-
           gunzip -f mihomo.gz
           chmod +x mihomo
-
           if ! ./mihomo -v; then
             echo "❌ mihomo 二进制无法运行（可能架构不匹配），终止 workflow"
             exit 1
@@ -64,7 +68,7 @@ jobs:
           EXTRA_SUBS: ${{ secrets.EXTRA_SUBS }}
         run: |
           cat << 'PYEOF' > collect.py
-          import os, base64, json, time, socket, asyncio, subprocess, datetime
+          import os, base64, json, time, socket, asyncio, subprocess, datetime, ipaddress
           import urllib.request, urllib.parse
           import yaml
           from collections import defaultdict
@@ -91,13 +95,47 @@ jobs:
           MIHOMO_API             = "http://127.0.0.1:9090"
           MIHOMO_SECRET          = "AutoCollect2025"
 
-          # mihomo 启动检测参数（改进点：更长超时 + 真实 API 探测 + 进程存活检测）
+          # mihomo 启动检测参数
           MIHOMO_CONFIG_TEST_TIMEOUT = 30   # 秒，`mihomo -t` 配置校验超时
-          MIHOMO_START_TIMEOUT   = 30       # 秒，等待 API 就绪的总时长
+          MIHOMO_START_TIMEOUT   = 30       # 秒，等待 API 就绪的总时长（每次尝试）
+          MIHOMO_START_RETRIES   = 2        # 启动失败时最多重试几次（含首次）
           MIHOMO_POLL_INTERVAL   = 0.5      # 秒，轮询间隔
 
           PREFIXES = ('vmess://', 'vless://', 'trojan://', 'ss://',
                       'hysteria2://', 'hy2://', 'tuic://')
+
+          # ================================================================
+          # “国内友好度”启发式打分（不保证一定能连，只是提高存活概率的经验规则）
+          # ================================================================
+          # GFW 主动探测对没有 TLS 握手特征的裸协议识别率更高，
+          # 常见 HTTPS/CDN 端口的流量也不容易被针对性观察，所以给这两类特征加分。
+          COMMON_TLS_PORTS = {443, 8443, 2053, 2083, 2087, 2096, 2052, 2082, 2086, 2095}
+
+          # 已知长期被针对性封锁的 IP 段：这里特意留空。
+          # 我没有可靠、实时更新的封锁 IP 段数据源，编一份清单反而可能是错的/过时的，
+          # 误导你以为“过滤过了就没问题”。建议你根据自己实际连接经验往这里加 CIDR，
+          # 例如 BLOCKED_CIDRS = ['1.2.3.0/24']。默认空列表 = 这一项不生效。
+          BLOCKED_CIDRS = []
+
+          def china_friendly_score(px):
+              """给一个 Clash 代理字典打分，分数越高，启发式认为越可能在国内网络存活。"""
+              score = 0
+              if px.get('tls'):
+                  score += 2
+              if px.get('port') in COMMON_TLS_PORTS:
+                  score += 1
+              if px.get('network') == 'ws' and px.get('tls'):
+                  score += 1  # ws+tls 伪装成普通 https 网页流量，识别难度更高
+              server = px.get('server', '')
+              try:
+                  ip = ipaddress.ip_address(server)
+                  for cidr in BLOCKED_CIDRS:
+                      if ip in ipaddress.ip_network(cidr):
+                          score -= 100
+                          break
+              except ValueError:
+                  pass  # server 是域名而不是 IP，跳过网段检查
+              return score
 
           # ================================================================
           # 搜索策略（大范围撒网）
@@ -742,7 +780,7 @@ jobs:
               return None
 
           # ================================================================
-          # mihomo 生命周期管理（改进点：配置校验 + 日志留存 + 真实 API 探测）
+          # mihomo 生命周期管理（配置校验 + 日志留存 + 真实 API 探测 + 失败重试）
           # ================================================================
 
           def validate_mihomo_config(home_dir):
@@ -761,28 +799,32 @@ jobs:
               except Exception as e:
                   return False, f"mihomo -t 校验异常: {e}"
 
-          def start_mihomo(home_dir):
-              """
-              启动 mihomo 并等待 API 就绪。
-              返回 (proc, ready, log_paths)。
-              失败时会打印日志尾部帮助排查，而不是静默降级。
-              """
+          def _kill_proc(proc):
+              if not proc:
+                  return
+              try:
+                  if proc.poll() is None:
+                      proc.terminate()
+                      try:
+                          proc.wait(timeout=5)
+                      except subprocess.TimeoutExpired:
+                          proc.kill()
+              except Exception:
+                  pass
+
+          def _try_start_once(home_dir, attempt_no):
               stdout_path = os.path.join(home_dir, 'stdout.log')
               stderr_path = os.path.join(home_dir, 'stderr.log')
               log_out = open(stdout_path, 'w')
               log_err = open(stderr_path, 'w')
-
               proc = subprocess.Popen(
                   ['./mihomo', '-d', home_dir],
                   stdout=log_out, stderr=log_err,
               )
-
               ready = False
               attempts = int(MIHOMO_START_TIMEOUT / MIHOMO_POLL_INTERVAL)
               exited_early = False
-
               for _ in range(attempts):
-                  # 进程是否已经退出（比纯 TCP 探测更早发现问题）
                   if proc.poll() is not None:
                       exited_early = True
                       break
@@ -796,14 +838,12 @@ jobs:
                   except Exception:
                       pass
                   time.sleep(MIHOMO_POLL_INTERVAL)
-
-              log_out.flush(); log_err.flush()
-              log_out.close(); log_err.close()
-
+              log_out.flush(); log_out.close()
+              log_err.flush(); log_err.close()
               if not ready:
                   reason = f"进程提前退出，退出码 {proc.returncode}" if exited_early \
                       else f"等待 {MIHOMO_START_TIMEOUT}s 后 API 仍未就绪"
-                  print(f"⚠️  mihomo 启动失败（{reason}），降级使用 TCP 结果")
+                  print(f"⚠️  mihomo 第 {attempt_no} 次启动失败（{reason}）")
                   for path, label in ((stderr_path, 'stderr'), (stdout_path, 'stdout')):
                       try:
                           with open(path, encoding='utf-8', errors='ignore') as f:
@@ -813,8 +853,21 @@ jobs:
                               print(''.join(tail))
                       except Exception:
                           pass
-
               return proc, ready
+
+          def start_mihomo(home_dir):
+              """
+              启动 mihomo 并等待 API 就绪，失败时按 MIHOMO_START_RETRIES 重试。
+              返回 (proc, ready)。
+              """
+              proc = None
+              for attempt in range(1, MIHOMO_START_RETRIES + 1):
+                  _kill_proc(proc)
+                  proc, ready = _try_start_once(home_dir, attempt)
+                  if ready:
+                      return proc, True
+              print(f"⚠️  连续 {MIHOMO_START_RETRIES} 次启动均失败，降级使用 TCP 结果")
+              return proc, False
 
           # ================================================================
           # 主逻辑
@@ -925,11 +978,13 @@ jobs:
               print(f"\n🌐 Stage 2 真实 HTTP 测速（{len(tcp_candidates)} 个节点）...")
               used_names = set()
               name_to_link = {}
+              name_to_proxy = {}
               clash_proxies = []
               for link in tcp_candidates:
                   px = to_clash(link, used_names)
                   if px:
                       name_to_link[px['name']] = link
+                      name_to_proxy[px['name']] = px
                       clash_proxies.append(px)
 
               home_dir = 'mihomo_home'
@@ -937,7 +992,7 @@ jobs:
               with open(os.path.join(home_dir, 'config.yaml'), 'w', encoding='utf-8') as f:
                   yaml.dump({
                       'mixed-port': 7888, 'external-controller': '127.0.0.1:9090',
-                      'secret': MIHOMO_SECRET, 'log-level': 'silent',
+                      'secret': MIHOMO_SECRET, 'log-level': 'info',
                       'mode': 'direct', 'ipv6': False, 'geo-auto-update': False,
                       'proxies': clash_proxies, 'proxy-groups': [], 'rules': [],
                   }, f, allow_unicode=True, sort_keys=False)
@@ -951,29 +1006,48 @@ jobs:
                   ready = False
                   proc = None
               else:
-                  # 8b. 启动 mihomo 并真实探测 API（而不是只测 TCP 端口）
+                  # 8b. 启动 mihomo 并真实探测 API（而不是只测 TCP 端口），失败会自动重试
                   proc, ready = start_mihomo(home_dir)
 
               best_links = []
-              if not ready:
-                  best_links = tcp_candidates[:TOP_N]
-              else:
-                  time.sleep(0.5)
-                  t0 = time.time()
-                  http_results = run_http_stage(list(name_to_link.keys()))
-                  print(f"   用时 {round(time.time()-t0, 1)}s")
-                  if proc and proc.poll() is None:
-                      proc.terminate()
-                  ok = sorted([(n, d) for n, d in http_results.items() if d],
-                               key=lambda x: x[1])
-                  print(f"✅ HTTP 可用: {len(ok)}/{len(clash_proxies)}")
-                  best_links = [name_to_link[n] for n, _ in ok[:TOP_N]]
-                  if len(best_links) < TOP_N:
-                      tested = set(best_links)
-                      for link in tcp_candidates + unique_nodes:
-                          if len(best_links) >= TOP_N: break
-                          if link not in tested:
+              try:
+                  if not ready:
+                      # 降级路径：没有真实测速数据，只能按“国内友好度”启发式打分排序
+                      scored = sorted(
+                          tcp_candidates,
+                          key=lambda link: -china_friendly_score(
+                              name_to_proxy.get(
+                                  next((n for n, l in name_to_link.items() if l == link), None), {}
+                              ) if link in name_to_link.values() else {}
+                          )
+                      )
+                      best_links = scored[:TOP_N]
+                  else:
+                      time.sleep(0.5)
+                      t0 = time.time()
+                      http_results = run_http_stage(list(name_to_link.keys()))
+                      print(f"   用时 {round(time.time()-t0, 1)}s")
+                      ok = [(n, d) for n, d in http_results.items() if d]
+                      # 先按“国内友好度”打分排序，分数相同时再按 mihomo 测得的延迟排序，
+                      # 这样能通过真实测速的前提下，优先把更可能在国内存活的节点排到前面
+                      ok.sort(key=lambda nd: (-china_friendly_score(name_to_proxy[nd[0]]), nd[1]))
+                      print(f"✅ HTTP 可用: {len(ok)}/{len(clash_proxies)}")
+                      best_links = [name_to_link[n] for n, _ in ok[:TOP_N]]
+                      if len(best_links) < TOP_N:
+                          tested = set(best_links)
+                          remaining = [link for link in (tcp_candidates + unique_nodes)
+                                       if link not in tested]
+                          # 补位的候选也按国内友好度排一下序，而不是原始顺序
+                          used_tmp = set()
+                          def _score_link(link):
+                              px = to_clash(link, used_tmp) or {}
+                              return -china_friendly_score(px)
+                          remaining.sort(key=_score_link)
+                          for link in remaining:
+                              if len(best_links) >= TOP_N: break
                               best_links.append(link); tested.add(link)
+              finally:
+                  _kill_proc(proc)
 
               # 9. 输出订阅文件
               combined = '\n'.join(best_links)
@@ -1010,7 +1084,7 @@ jobs:
 
           python3 collect.py
 
-      - name: 上传 mihomo 日志（便于排查）
+      - name: 上传 mihomo 日志（便于排查启动问题，不含节点凭证）
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -1018,7 +1092,6 @@ jobs:
           path: |
             mihomo_home/stdout.log
             mihomo_home/stderr.log
-            mihomo_home/config.yaml
           if-no-files-found: ignore
           retention-days: 3
 
