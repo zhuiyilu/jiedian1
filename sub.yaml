@@ -3,89 +3,19 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷FR_168|159KB/s|M002-260618
+- name: By EbraSha 🧿
   type: vless
-  server: 104.16.151.21
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇨🇦139189 | ⚡️Telegram = t.me/SOSkeyNET
-  type: vless
-  server: 172.67.109.230
+  server: 151.101.2.219
   port: 443
-  uuid: 50414e45-4c5f-5a45-5553-0a45278f5fde
+  uuid: 0da65197-aee5-42e0-8676-bd090f95dd6c
   udp: true
   network: ws
   tls: true
-  servername: web-app-nfr45q.jakosnwilimain.workers.dev
-  client-fingerprint: chrome
+  servername: speedtest.net
   ws-opts:
-    path: /TrexBridge
+    path: /Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray?ed=2048
     headers:
-      Host: web-app-nfr45q.jakosnwilimain.workers.dev
-- name: 美国/San Francisco/United States/San Francisco-17
-  type: vless
-  server: 104.17.147.22
-  port: 443
-  uuid: mahanvpn-mahanvpn
-  udp: true
-  network: ws
-  tls: true
-  servername: mAhaNrEaliteAm.MaHkHan.iR
-  ws-opts:
-    path: /
-    headers:
-      Host: mAhaNrEaliteAm.MaHkHan.iR
-- name: '@v2ray_ng'
-  type: vless
-  server: 8.35.211.241
-  port: 443
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
-  udp: true
-  network: ws
-  tls: true
-  servername: pagescm.freen11.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /friend
-    headers:
-      Host: pagescm.freen11.cc.cd
-- name: By EbraSha 🛰️
-  type: vless
-  server: 104.19.144.33
-  port: 443
-  uuid: 0d0782a3-2c62-4936-b893-5790188778ea
-  udp: true
-  network: ws
-  tls: true
-  servername: UsDtGq0NhQ.gIgA1.oRg
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: UsDtGq0NhQ.gIgA1.oRg
-- name: 🏁RELAY-172.67.170.13-0812
-  type: vmess
-  server: 172.67.170.13
-  port: 443
-  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /linkws
-    headers:
-      Host: glweidf.sbs
+      Host: barkatc17.ir
 - name: ❤️‍🔥 کانال تل
   type: vless
   server: 199.232.78.160
@@ -99,86 +29,155 @@ proxies:
     path: /
     headers:
       Host: alesis724.global.ssl.fastly.net
-- name: 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 2ms
+- name: vless-279513855
   type: vless
-  server: 104.18.175.58
-  port: 2087
-  uuid: b9ec63fa-d5e6-4063-9f5d-60442e9f427b
+  server: 194.59.5.46
+  port: 2096
+  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
   udp: true
   network: ws
   tls: true
-  servername: panelz.zlinkid.shop
-  client-fingerprint: chrome
+  servername: wild-sky-f384.alvlirm3737.workers.dev
   ws-opts:
-    path: /
+    path: /proxyip
     headers:
-      Host: panelz.zlinkid.shop
-- name: 美国/San Francisco/United States/San Francisco-16
+      Host: wild-sky-f384.alvlirm3737.workers.dev
+- name: '@Alirewa-354'
   type: vless
-  server: 172.66.44.97
+  server: 165.215.250.129
+  port: 443
+  uuid: 0f1b6d8d-3f8c-4713-b32d-c94947083485
+  udp: true
+  network: ws
+  tls: true
+  servername: apexbhao1.qzz.io
+  ws-opts:
+    path: /43.218.77.16
+    headers:
+      Host: apexbhao1.qzz.io
+- name: 🇫🇷FR_765|369KB/s|C002-260622
+  type: vless
+  server: 172.67.213.26
   port: 2053
-  uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c
+  uuid: 52450a53-ac49-42ff-be36-0899178d34b9
   udp: true
   network: ws
   tls: true
-  servername: po.fastbrokencompony.com
+  servername: LiTtLE-vIoLet-8ADE.VpnSToREGod.WORkerS.deV
+  client-fingerprint: chrome
+  ws-opts:
+    path: /eyJqdW5rIjoiOHBjT0w3NmxvazAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=?ed=2560
+    headers:
+      Host: little-violet-8ade.vpnstoregod.workers.dev
+- name: '@tootffarangi🍓-14'
+  type: vless
+  server: 172.67.74.10
+  port: 2087
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
+  udp: true
+  network: ws
+  tls: true
+  servername: amphetamine.adaspoloandco.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /download.php
+    headers:
+      Host: amphetamine.adaspoloandco.com
+- name: kurdconfig
+  type: vless
+  server: 104.24.240.33
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-d2c4faaab05a
+  udp: true
+  network: ws
+  tls: true
+  servername: trexbridgepanel-j1mo9z.trexbridge-rikrw1.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /stream/TrexBridge/d2c4faaab05a
+    headers:
+      Host: trexbridgepanel-j1mo9z.trexbridge-rikrw1.workers.dev
+- name: '@bored_vpn'
+  type: vless
+  server: 162.159.43.11
+  port: 2053
+  uuid: 6e5aeb09-49db-4447-b7b4-d2af001f692d
+  udp: true
+  network: ws
+  tls: true
+  servername: paneluk.roomode.ir
+  client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: po.fastbrokencompony.com
-- name: '@KAFING_2'
+      Host: paneluk.roomode.ir
+- name: '@VConfing'
   type: vless
-  server: 8.35.211.138
-  port: 2096
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
+  server: 89.116.161.84
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
-  servername: pagescm.freen20.cc.cd
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
   ws-opts:
-    path: /item
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
+  type: vless
+  server: 104.18.155.229
+  port: 443
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
+  udp: true
+  network: ws
+  tls: true
+  servername: www.genflix.co.id.r3xxe.eu.cc
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: www.genflix.co.id.r3xxe.eu.cc
+- name: 🏁RELAY-104.31.16.65-9006
+  type: vmess
+  server: 104.31.16.65
+  port: 2053
+  uuid: 72f76c36-3e3c-45b3-a61f-d8f017345958
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /?ed=2048
     headers: {}
-- name: By EbraSha 📀
+- name: '@v2rayngzendegimamad🕊️'
   type: vless
-  server: 185.18.250.127
-  port: 2096
-  uuid: 2ee26119-94e5-40b4-ba3a-16354021b600
+  server: 104.18.13.149
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   network: ws
   tls: true
-  servername: 69565ce3109804e7813f98ee.mmdbay.blog
+  servername: sni.111000.dynv6.net
+  ws-opts:
+    path: /?Telegram @v2rayngzendegimamad
+    headers:
+      Host: sni.111000.dynv6.net
+- name: 🇺🇸 CxrolVPN
+  type: vless
+  server: 172.64.153.105
+  port: 443
+  uuid: 6fc36cfc-561f-4544-9a0e-7c732c478500
+  udp: true
+  network: ws
+  tls: true
+  servername: us.vipserver14.workers.dev
   client-fingerprint: chrome
   ws-opts:
-    path: /graphql
+    path: /?ed=2048
     headers:
-      Host: 69565ce3109804e7813f98ee.mmdbay.blog
-- name: 🇫🇷FR_83|192KB/s|M002-260618
-  type: vless
-  server: 104.18.95.26
-  port: 443
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  network: ws
-  tls: true
-  servername: hhlfy.twiladaphne.ndjp.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🚀t.me/iProxyChannel
-  type: vless
-  server: 162.159.12.161
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  udp: true
-  network: ws
-  tls: true
-  servername: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
+      Host: us.vipserver14.workers.dev
 - name: vless-294288565
   type: vless
   server: 172.64.80.1
@@ -193,115 +192,6 @@ proxies:
     path: /ws-cdn
     headers:
       Host: 1.rmgyvpn.rest
-- name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 1ms
-  type: vless
-  server: 198.12.144.8
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-- name: 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
-  type: vless
-  server: 104.18.155.229
-  port: 443
-  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
-  udp: true
-  network: ws
-  tls: true
-  servername: www.genflix.co.id.r3xxe.eu.cc
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
-- name: 🔵@chillguy_vpn
-  type: vless
-  server: 172.67.74.10
-  port: 2087
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  udp: true
-  network: ws
-  tls: true
-  servername: amphetamine.adaspoloandco.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /download.php
-    headers:
-      Host: amphetamine.adaspoloandco.com
-- name: 美国/San Francisco/United States/San Francisco-15
-  type: vless
-  server: 172.64.155.209
-  port: 2053
-  uuid: d361072e-9e0e-4e2d-8ec7-2a4189b5b23a
-  udp: true
-  network: ws
-  tls: true
-  servername: ov.iran-servers.shop
-  ws-opts:
-    path: /J5aLQOY1R9ONWYCM
-    headers:
-      Host: ov.iran-servers.shop
-- name: '@v2rayng3'
-  type: vless
-  server: 162.159.152.120
-  port: 443
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
-  udp: true
-  network: ws
-  tls: true
-  servername: pagescm.freen29.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /code/dl
-    headers:
-      Host: pagescm.freen29.cc.cd
-- name: 🇫🇷FR_130|106KB/s|M002-260618
-  type: vless
-  server: 172.64.53.194
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '@ho3ino00👳🏽‍♂️ آخوندک'
-  type: vmess
-  server: 45.85.119.48
-  port: 2053
-  uuid: 72f76c36-3e3c-45b3-a61f-d8f017345958
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: a3.iraniancp.fun
-  ws-opts:
-    path: /
-    headers:
-      Host: a3.iraniancp.fun
-- name: vless-279513855
-  type: vless
-  server: 194.59.5.46
-  port: 2096
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  network: ws
-  tls: true
-  servername: wild-sky-f384.alvlirm3737.workers.dev
-  ws-opts:
-    path: /proxyip
-    headers:
-      Host: wild-sky-f384.alvlirm3737.workers.dev
 - name: 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-2
   type: vless
   server: 162.159.13.71
@@ -315,169 +205,130 @@ proxies:
     path: /proxyip=dc844a1f.tp15333.ip.090227.xyzfp=chrome
     headers:
       Host: nbhhh.mrcool.kdns.fr
-- name: '@v2rayng3-2'
+- name: Alfred_Config
   type: vless
-  server: 172.67.71.242
+  server: 45.130.125.66
   port: 443
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
+  uuid: AlfredConfig
   udp: true
   network: ws
   tls: true
-  servername: pagescm.freen30.cc.cd
+  servername: alfi.yas-nowin.ir
+  client-fingerprint: chrome
   ws-opts:
-    path: /html/ads
+    path: /?ed=2048
     headers:
-      Host: pagescm.freen30.cc.cd
-- name: 🏁RELAY-172.67.204.84-0577
-  type: vmess
-  server: 172.67.204.84
+      Host: alfi.yas-nowin.ir
+- name: kurdconfig-2
+  type: vless
+  server: 104.27.201.25
   port: 443
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: 50414e45-4c5f-5a45-5553-d2c4faaab05a
+  udp: true
+  network: ws
+  tls: true
+  servername: trexbridgepanel-j1mo9z.trexbridge-rikrw1.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /stream/TrexBridge/d2c4faaab05a
+    headers:
+      Host: trexbridgepanel-j1mo9z.trexbridge-rikrw1.workers.dev
+- name: '@NormanConfig 💖'
+  type: vless
+  server: 108.162.198.5
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: t.me/soheylFarzane 🕊️ irancell
+  type: vmess
+  server: 45.85.119.124
+  port: 8443
+  uuid: 92e61a37-53de-49b7-ade3-a7aaf275bb58
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: free.soheylv2ray.site
+  ws-opts:
+    path: /nginx5511/
+    headers:
+      Host: free.soheylv2ray.site
+- name: 🇫🇷FR_768|246KB/s|C002-260622
+  type: vless
+  server: 185.207.197.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  network: ws
+  tls: true
+  servername: notls.lukongtou.eu.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: '@npv_vpn11'
+  type: vless
+  server: 162.159.152.129
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🏁RELAY-104.31.16.65-9003
+  type: vmess
+  server: 104.31.16.65
+  port: 443
+  uuid: c13277ce-cda6-4d01-cedc-1e3605a0eb72
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
   ws-opts:
-    path: /linkws
-    headers:
-      Host: jahfkjha.cfd
-- name: 🇫🇷FR_194|525KB/s|M002-260618
-  type: vless
-  server: 104.18.40.152
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
-  type: vless
-  server: 172.64.38.215
-  port: 443
-  uuid: 29ca503d-e6b8-4509-b666-48133f450857
-  udp: true
-  network: ws
-  tls: true
-  servername: learn00.evany.de5.net
-  client-fingerprint: random
-  ws-opts:
-    path: /fdip=tw.william.us.ci!txt
-    headers:
-      Host: learn00.evany.de5.net
-- name: 美国/San Francisco/United States/San Francisco-14
-  type: vless
-  server: 104.16.75.68
-  port: 443
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  udp: true
-  network: ws
-  tls: true
-  servername: germany-2.ariyuz.org
-  ws-opts:
-    path: /
-    headers:
-      Host: germany-2.ariyuz.org
-- name: '@v2rayng3-3'
-  type: vless
-  server: 104.17.150.224
-  port: 443
-  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
-  udp: true
-  network: ws
-  tls: true
-  servername: pagescm.freen15.cc.cd
-  ws-opts:
-    path: /album/bt
-    headers:
-      Host: pagescm.freen15.cc.cd
-- name: By EbraSha 🌑
-  type: vless
-  server: 104.21.83.113
-  port: 443
-  uuid: 0a23af3f-3f9b-4333-ae89-796f7fe2f9ce
-  udp: true
-  network: ws
-  tls: true
-  servername: S859886XYzxs.859886.XYZ
-  client-fingerprint: chrome
-  ws-opts:
-    path: /25Rajr8UdFGa29fCwxS
-    headers:
-      Host: s859886xyzxs.859886.xyz
-- name: 🏁RELAY-172.67.176.245-0702
-  type: vmess
-  server: 172.67.176.245
-  port: 443
-  uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /api/v1/graphql
-    headers:
-      Host: cg1c12.waimaojd.com
-- name: 🇫🇷FR_226|394KB/s|M002-260618
-  type: vless
-  server: 172.64.53.42
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇨🇦139196 | ⚡️Telegram = t.me/SOSkeyNET
-  type: vless
-  server: 172.64.52.30
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
+    path: /12796?ed=2048
     headers: {}
-- name: v2rayng3
+- name: vless-13073485
   type: vless
-  server: 172.66.47.69
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  tls: true
-  servername: sni.111000.indevs.in
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.indevs.in
-- name: 🤖18@SHAHSERVER1
-  type: vless
-  server: 104.21.83.83
+  server: 172.67.145.21
   port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   network: ws
   tls: true
-  servername: b8k86.z3xq.fzi.hh.vavava.kdns.fr
+  servername: index.arcane509.workers.dev
+  ws-opts:
+    path: /assets
+    headers:
+      Host: index.arcane509.workers.dev
+- name: 🇫🇷FR_739|348KB/s|C002-260622
+  type: vless
+  server: 104.21.61.23
+  port: 2083
+  uuid: 2730487f-0ed5-4f04-92d5-f95f9253d4f4
+  udp: true
+  network: ws
+  tls: true
+  servername: v2ngfast-v2ngfast-v2ngfast-v2ngfast.jovego2551.workers.dev
   client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: b8k86.z3xq.fzi.hh.vavava.kdns.fr
+      Host: v2ngfast-v2ngfast-v2ngfast-v2ngfast.jovego2551.workers.dev
 - name: 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-3
   type: vless
   server: 104.25.252.37
@@ -491,157 +342,130 @@ proxies:
     path: /
     headers:
       Host: juzi.qea.ccwu.cc
-- name: 🏁RELAY-104.26.13.54-5904
-  type: vmess
-  server: time.is
+- name: '@npv_vpn11-2'
+  type: vless
+  server: 108.162.198.201
   port: 443
-  uuid: b526926d-1474-4f41-985e-8b877cb840cd
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🏁RELAY-104.16.60.8-1151
+  type: vmess
+  server: 104.16.60.8
+  port: 2086
+  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
-  servername: time.is
   ws-opts:
-    path: /
+    path: /glweidf.sbs/linkws
     headers:
-      Host: shs111.kejixiaoqi666.store
-- name: 🇫🇷FR_238|185KB/s|M002-260618
-  type: vless
-  server: 104.16.150.108
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+      Host: 1c11-muddy-rice-1c11.vetanex501.workers.dev
 - name: 'کانال تلگرام : Free_VPN_CH@'
   type: vless
-  server: 160.79.104.238
+  server: 162.159.153.231
   port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  tls: true
-  servername: sni.jpmj.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: sni.jpmj.dev
-- name: 🤖15@SHAHSERVER1
-  type: vless
-  server: 104.25.251.21
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: b8k86.z3xq.fzi.hh.vavava.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: b8k86.z3xq.fzi.hh.vavava.kdns.fr
-- name: 荷兰/The Netherlands-3
-  type: vless
-  server: 188.164.248.69
-  port: 443
-  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-  udp: true
-  network: ws
-  tls: true
-  servername: free-7f1.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: free-7f1.pages.dev
-- name: By EbraSha 🌐
-  type: vless
-  server: 172.66.46.220
-  port: 2083
-  uuid: 34208027-101c-4e79-a0e3-87f62ef214e6
-  udp: true
-  network: ws
-  tls: true
-  servername: MoRtEzA865.paGES.DEV
-  ws-opts:
-    path: /Telegram@V2ray_Alpha/?ed=2560
-    headers:
-      Host: MoRtEzA865.paGES.DEV
-- name: 🏁RELAY-104.21.9.21-0775
-  type: vmess
-  server: 104.21.9.21
-  port: 443
-  uuid: f9ccede9-ca9c-4719-b105-e494742499e3
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: kmz3.sassanidempire.com
-- name: 🇫🇷FR_113|412KB/s|A004-260618
-  type: vless
-  server: 104.16.248.48
-  port: 443
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  network: ws
-  tls: true
-  servername: hhlfy.twiladaphne.ndjp.net
-  client-fingerprint: random
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 'کانال تلگرام : Free_VPN_CH@-2'
-  type: vless
-  server: 162.159.12.151
-  port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   network: ws
   tls: true
   servername: sni.111000.indevs.in
   ws-opts:
-    path: /
+    path: /?ed=2560
     headers:
       Host: sni.111000.indevs.in
-- name: vless-38398
+- name: '@SkyLiink_vpn 🇩🇪'
   type: vless
-  server: 104.17.22.240
-  port: 443
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  server: 104.18.155.69
+  port: 2087
+  uuid: 7fb197a7-dab7-4fae-95e6-fe527c8d2453
   udp: true
   network: ws
   tls: true
-  servername: hhlfy.twiladaphne.ndjp.net
-  client-fingerprint: random
+  servername: ftp.skylinknet.ir
+  client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🆔ar14n24b 🔒 VL-WS-N/A 🇨🇦 CA 2ms
+      Host: ftp.skylinknet.ir
+- name: vless-330534943
   type: vless
-  server: 104.21.74.214
-  port: 2053
-  uuid: 55c6971c-4000-431c-9ff4-85c029cee241
+  server: 172.67.143.113
+  port: 443
+  uuid: 2da2f07d-ee01-33e2-e1a2-c769d1ad45c7
   udp: true
   network: ws
   tls: true
-  servername: bahmAn-DoL.shopshIrVAn.IR.
-  client-fingerprint: randomized
+  servername: ez-c8114e.ezaccess127d635.workers.dev
+  client-fingerprint: chrome
   ws-opts:
-    path: /v3rbuify.yinte.ir.shop.com?ed=2560
+    path: /sync
     headers:
-      Host: Bahman-dol.shopshirvan.ir.
+      Host: ez-c8114e.ezaccess127d635.workers.dev
+- name: 🇺🇸 AetrisVPN
+  type: vless
+  server: 77.74.228.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  network: ws
+  tls: true
+  servername: notls.lukongtou.eu.org
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: vpnsal
+  type: vless
+  server: 140.248.186.45
+  port: 443
+  uuid: XpnTeam-11
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: '@npv_vpn11-3'
+  type: vless
+  server: 104.19.54.116
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: '@v2rayng3'
+  type: vless
+  server: 45.130.125.207
+  port: 443
+  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
+  udp: true
+  network: ws
+  tls: true
+  servername: shegeftihaaa.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rsedgws
+    headers:
+      Host: shegeftihaaa.net
 - name: 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-4
   type: vless
   server: 172.64.53.227
@@ -656,51 +480,39 @@ proxies:
     path: /
     headers:
       Host: fgnix832fx.fx6hsv0.ccwu.cc
-- name: 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
+- name: Alfred_Config-2
   type: vless
-  server: 104.21.40.208
-  port: 8443
-  uuid: 9047efd2-5aa4-4c9c-a58f-a5791b06c79e
+  server: 104.17.107.134
+  port: 443
+  uuid: AlfredConfig
   udp: true
   network: ws
   tls: true
-  servername: ad-010.vector2llqn.info
+  servername: alfi.yas-nowin.ir
   client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /?ed=2048
     headers:
-      Host: ad-010.vector2llqn.info
-- name: 美国/San Francisco/United States/San Francisco-11
+      Host: alfi.yas-nowin.ir
+- name: '@npv_vpn11-4'
   type: vless
-  server: 8.39.125.152
-  port: 8443
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  network: ws
-  tls: true
-  servername: bitter-shadow-4fc5.alvlirm852.workers.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: bitter-shadow-4fc5.alvlirm852.workers.dev
-- name: ❤️‍🔥 کانال تلگرام HiByeVPNN@
-  type: vless
-  server: 172.64.152.33
-  port: 2096
-  uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
-  udp: true
-  network: ws
-  tls: true
-  servername: 872ede3847653442.hozheen.ir
-  ws-opts:
-    path: /ws?ed=2560
-    headers:
-      Host: com.hozheen.ir
-- name: 🇺🇸US-216.24.57.57-1838
-  type: vmess
-  server: 216.24.57.57
+  server: 108.162.192.4
   port: 443
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  uuid: dd321f25-8f90-4e7c-a1fa-01883a8988a7
+  udp: true
+  network: ws
+  tls: true
+  servername: soucuovls.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: pyip=proxyip.cmliussss.net
+    headers:
+      Host: soucuovls.pages.dev
+- name: 🏁RELAY-104.21.44.106-0770
+  type: vmess
+  server: 104.21.44.106
+  port: 443
+  uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e
   alterId: 0
   cipher: auto
   udp: true
@@ -709,92 +521,10 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: e130917c-1b58-4136-b2d9-76dc920e0add.add97ee8-0f14-48a3-b2cd-979c56742e64.loseyourip.com
-- name: 🇬🇧GB_83|176KB/s|M003-260806
+      Host: xmivideo.cfd
+- name: 🇪🇺 AetrisVPN
   type: vless
-  server: 104.21.93.245
-  port: 8443
-  uuid: ef66f257-2187-48a0-ae46-fbd0519d24ab
-  udp: true
-  network: ws
-  tls: true
-  servername: focalin.adaspoloandco.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /RizZrAcK
-    headers:
-      Host: focalin.adaspoloandco.com
-- name: 🔵@chillguy_vpn-2
-  type: vless
-  server: 104.26.0.7
-  port: 443
-  uuid: 577699f7-468d-4b63-ae21-cdcdfd8d11c2
-  udp: true
-  network: ws
-  tls: true
-  servername: baguette.adaspoloandco.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GoorBah
-    headers:
-      Host: baguette.adaspoloandco.com
-- name: 美国/San Francisco/United States/San Francisco-10
-  type: vless
-  server: 104.21.96.1
-  port: 443
-  uuid: 0836463b-214f-4af6-aa85-85a56a62388e
-  udp: true
-  network: ws
-  tls: true
-  servername: D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev
-  ws-opts:
-    path: /Pl67KhTLWmJqQ2lY
-    headers:
-      Host: D2127A49-Flat-WOoD-c4b5.Milia-AKbaRpOor.workers.Dev
-- name: ❤️‍🔥 کانال تلگرام HiByeVPNN@-2
-  type: vless
-  server: 104.20.6.134
-  port: 2096
-  uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
-  udp: true
-  network: ws
-  tls: true
-  servername: 4dcb0d80784f3081.hozheen.ir
-  ws-opts:
-    path: /ws?ed=2560
-    headers:
-      Host: newgen14.hozheen.ir
-- name: By EbraSha 🐺
-  type: vless
-  server: 104.18.34.21
-  port: 8443
-  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
-  udp: true
-  network: ws
-  tls: true
-  servername: socks5.revil-time3.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /socks5://128.140.46.169:13482
-    headers:
-      Host: socks5.revil-time3.workers.dev
-- name: 🏁RELAY-188.114.96.58-1954
-  type: vmess
-  server: 188.114.96.58
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 1
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: linkvws
-    headers:
-      Host: ophelia.mom
-- name: 🇫🇷FR_181|118KB/s|M002-260618
-  type: vless
-  server: 104.19.215.97
+  server: 104.16.150.108
   port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
@@ -804,60 +534,142 @@ proxies:
   client-fingerprint: chrome
   ws-opts:
     path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '@hopev2ray💕'
+    headers: {}
+- name: '@Hope_Net-join-us-on-Telegram'
   type: vless
-  server: 170.114.46.6
+  server: 172.67.171.42
   port: 443
-  uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca
+  uuid: 8de0603e-5fe5-4b50-bebe-4d63115163a4
+  udp: true
+  network: ws
+  tls: true
+  servername: nl1.v2vless.site
+  ws-opts:
+    path: /vless
+    headers:
+      Host: nl1.v2vless.site
+- name: 'کانال تلگرام : Free_VPN_CH@-2'
+  type: vless
+  server: 160.153.136.8
+  port: 2096
+  uuid: Telegram
+  udp: true
+  network: ws
+  tls: true
+  servername: tn1rr.qzz.io
+  ws-opts:
+    path: /sg-lnd
+    headers:
+      Host: tn1rr.qzz.io
+- name: '@npv_vpn11-5'
+  type: vless
+  server: 198.41.208.112
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
   servername: support.zoom.us.yxls.eu.cc
   client-fingerprint: chrome
   ws-opts:
-    path: /id-tksi
+    path: /sg-melbi
     headers:
       Host: support.zoom.us.yxls.eu.cc
-- name: '@v2ray_configs_pools-join-us-on-Telegram'
+- name: '@V2rayi_net'
   type: vless
-  server: 103.169.142.192
+  server: 69.84.182.1
   port: 443
-  uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
+  uuid: 71ed6628-5870-4d19-8a52-f2a3ba3d4898
   udp: true
   network: ws
   tls: true
-  servername: jpm.ylks01.eu.org
+  servername: vbbc.ylks2024.us.kg
   ws-opts:
-    path: /blue
-    headers: {}
-- name: '@v2ray_configs_pools-join-us-on-Telegram-2'
-  type: vless
-  server: 45.80.111.27
-  port: 443
-  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
-  udp: true
-  network: ws
-  tls: true
-  servername: cfed.tgzdyz2.top
-  ws-opts:
-    path: tg@zdyz2
-    headers: {}
-- name: ❤️‍🔥 کانال تلگرام HiByeVPNN@-3
-  type: vless
-  server: 104.16.121.147
-  port: 2096
-  uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
-  udp: true
-  network: ws
-  tls: true
-  servername: 9b94d317f693703f.hozheen.ir
-  ws-opts:
-    path: /ws?ed=2560
+    path: /youlingkaishi
     headers:
-      Host: com.hozheen.ir
-- name: 🇫🇷FR_195|360KB/s|A004-260618
+      Host: vbbc.ylks2024.us.kg
+- name: 🇪🇺 AetrisVPN-2
+  type: vless
+  server: 172.64.52.175
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers: {}
+- name: SG - zhuhai.uk
+  type: vless
+  server: ct.877774.xyz
+  port: 443
+  uuid: e30df0c8-d1f1-4ede-a6e6-9ec050decd2f
+  udp: true
+  network: ws
+  tls: true
+  servername: ap-south.862400.xyz
+  client-fingerprint: random
+  ws-opts:
+    path: /announcement
+    headers:
+      Host: ap-south.862400.xyz
+- name: By EbraSha 🪖
+  type: vless
+  server: 151.101.194.133
+  port: 443
+  uuid: 32dbe23a-852e-44a8-9dc2-80188643f550
+  udp: true
+  network: ws
+  tls: true
+  servername: mio.splashthat.com
+  ws-opts:
+    path: /telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn,telegram-@Sobi_Vpn?ed=2048
+    headers:
+      Host: moeinzp.com
+- name: 'کانال تلگرام : Free_VPN_CH@-3'
+  type: vless
+  server: 31.185.108.8
+  port: 2096
+  uuid: Telegram
+  udp: true
+  network: ws
+  tls: true
+  servername: tn1rr.qzz.io
+  ws-opts:
+    path: /sg-lnd
+    headers:
+      Host: tn1rr.qzz.io
+- name: '@npv_vpn11-6'
+  type: vless
+  server: 108.162.192.9
+  port: 443
+  uuid: dd321f25-8f90-4e7c-a1fa-01883a8988a7
+  udp: true
+  network: ws
+  tls: true
+  servername: soucuovls.pages.dev
+  client-fingerprint: random
+  ws-opts:
+    path: /pyip=proxyip.cmliussss.net
+    headers:
+      Host: soucuovls.pages.dev
+- name: 🏁RELAY-172.67.166.111-0982
+  type: vmess
+  server: 172.67.166.111
+  port: 443
+  uuid: 251165d1-f3ea-8977-4fe6-96d0601f493d
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: guil.tk
+- name: vless-296847779
   type: vless
   server: 104.16.151.220
   port: 443
@@ -871,101 +683,20 @@ proxies:
     path: /
     headers:
       Host: free-7f1.pages.dev
-- name: 🇨🇦 Join+Telegram:@SolVPN 🇨🇦-2
+- name: 🇺🇸 AetrisVPN-2
   type: vless
-  server: 172.64.149.209
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: fgnix832fx.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: fgnix832fx.fx6hsv0.ccwu.cc
-- name: 美国/San Francisco/United States/San Francisco-9
-  type: vless
-  server: 172.67.169.143
+  server: 18.244.214.108
   port: 443
-  uuid: e35a5ad5-0175-4cd6-b654-1eb220ff28f0
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
   udp: true
   network: ws
   tls: true
-  servername: infra-services-c8-2.21491204-f13b-4977-9cc9-5275edd68fd8.kdns.fr
-  ws-opts:
-    path: /Wvf67jc5MgASmsb9Qsr0
-    headers:
-      Host: infra-services-c8-2.21491204-f13b-4977-9cc9-5275edd68fd8.kdns.fr
-- name: ❤️‍🔥 کانال تلگرام HiByeVPNN@-4
-  type: vless
-  server: 104.18.4.138
-  port: 2096
-  uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
-  udp: true
-  network: ws
-  tls: true
-  servername: f53d749fda28cb85.hozheen.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws?ed=2560
-    headers:
-      Host: greattehran.hozheen.ir
-- name: By EbraSha 💣
-  type: vless
-  server: 104.21.12.150
-  port: 8443
-  uuid: a2dadb95-3f15-4e1c-b517-0b54c336a5fd
-  udp: true
-  network: ws
-  tls: true
-  servername: nl57.Vlessx.us
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: nl57.vlessx.us
-- name: 🇫🇷FR_246|243KB/s|S001-260618
-  type: vless
-  server: 162.159.128.253
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
+  servername: d1yxsk0zprgivr.cloudfront.net
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
-- name: '@skyliink_vpn丨چنل تلگرام 🇩🇪'
-  type: vless
-  server: 104.16.73.211
-  port: 8443
-  uuid: 78bb684e-0c43-45f7-aefb-e16368228948
-  udp: true
-  network: ws
-  tls: true
-  servername: ftp.skylinknet.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: ftp.skylinknet.ir
-- name: 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 2ms
-  type: vless
-  server: 141.193.27.8
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
+      Host: d1yxsk0zprgivr.cloudfront.net
 - name: 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
   type: vless
   server: 104.17.156.197
@@ -979,34 +710,61 @@ proxies:
     path: /
     headers:
       Host: juzi.qea.ccwu.cc
-- name: 🇫🇷FR_263|334KB/s|T001-260618
+- name: '@npv_vpn11-7'
   type: vless
-  server: 162.159.137.204
+  server: 162.159.23.117
   port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
-  servername: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🏁RELAY-104.21.55.223-1057
+  type: vmess
+  server: 104.21.55.223
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: jader.fun
+- name: 🚀t.me/iProxyChannel
+  type: vless
+  server: 162.159.12.161
+  port: 443
+  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  udp: true
+  network: ws
+  tls: true
+  servername: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
+  ws-opts:
+    path: /
+    headers:
+      Host: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
+- name: 🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬
+  type: vless
+  server: 172.67.75.217
+  port: 2096
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  udp: true
+  network: ws
+  tls: true
+  servername: vp14.cc.cd
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: 0h3qt.oqwt.pl0.hh.vavava.kdns.fr
-- name: '@v2ray_configs_pools-join-us-on-Telegram-3'
-  type: vless
-  server: 172.67.157.231
-  port: 443
-  uuid: 66b3cbba-e6ac-485a-9201-976a0476eab9
-  udp: true
-  network: ws
-  tls: true
-  servername: eSeTSecUrityLiCEnsE.RqUGI.woRkErs.dEV
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: EseTSECuRItYLicEnsE.RQUGI.worKErs.dev
+      Host: vp14.cc.cd
 - name: Arshiavpn12
   type: vless
   server: 104.17.162.123
@@ -1021,293 +779,225 @@ proxies:
     path: /?ed=2560
     headers:
       Host: 6nwf5rauksz8126xm.zjde5.de5.net
-- name: 🇭🇰HK-43.100.32.12-0268
-  type: vmess
-  server: n1747624274.4u9ma.icu
-  port: 443
-  uuid: d8daf507-a4ac-4eea-8399-8f0cd071eb52
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624274.4u9ma.icu
-- name: v2rayng3-2
+- name: '@npv_vpn11-8'
   type: vless
-  server: 63.141.128.45
+  server: 104.17.149.233
   port: 443
-  uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
-  servername: afrcloud5.c01.kr
-  ws-opts:
-    path: /188.240.213.98:8443
-    headers:
-      Host: afrcloud5.c01.kr
-- name: 🇫🇷FR_266|230KB/s|M002-260618
-  type: vless
-  server: 104.18.38.47
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: support.zoom.us.yxls.eu.cc
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '@Daily_Configs'
-  type: vless
-  server: 104.18.37.228
-  port: 443
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  udp: true
-  network: ws
-  tls: true
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: musiclovers85?ed=512
-    headers:
-      Host: josni.hoyes.cloudns.ch
-- name: 🇨🇦139191 | ⚡️Telegram = t.me/SOSkeyNET
-  type: vless
-  server: 104.27.97.195
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-0a45278f5fde
-  udp: true
-  network: ws
-  tls: true
-  servername: web-app-nfr45q.jakosnwilimain.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /TrexBridge
-    headers:
-      Host: web-app-nfr45q.jakosnwilimain.workers.dev
-- name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms
-  type: vless
-  server: 188.42.89.8
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-- name: 美国/San Francisco/United States/San Francisco-4
-  type: vless
-  server: 188.114.97.3
-  port: 443
-  uuid: d7d8af23-36cd-4c66-a42a-4469c177210f
-  udp: true
-  network: ws
-  tls: true
-  servername: FanCy-raIn-136E.tHisIsaLEe.wOrKeRS.deV
-  ws-opts:
-    path: /eyJqdW5rIjoidmJOWHUwYnBOS00zT04iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI5MS4xODYuMjE5LjgyIl19
-    headers:
-      Host: fancy-rain-136e.thisisalee.workers.dev
-- name: 🇫🇷FR_267|466KB/s|M002-260618
-  type: vless
-  server: 172.64.52.230
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '@Daily_Configs-2'
-  type: vless
-  server: 172.66.44.97
-  port: 443
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  udp: true
-  network: ws
-  tls: true
-  servername: josni.hoyes.cloudns.ch
   ws-opts:
     path: /sg-melbi
     headers:
-      Host: josni.hoyes.cloudns.ch
-- name: '@v2rayng3-4'
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🇱🇹@V2rayng_Fast
   type: vless
-  server: 216.24.57.6
-  port: 443
-  uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+  server: 89.116.250.135
+  port: 8443
+  uuid: 6fe9fe86-0dc0-4657-806c-1532d92f5640
   udp: true
   network: ws
   tls: true
-  servername: aquilacalyx.qzz.io
+  servername: ww.subster.ir
+  client-fingerprint: chrome
   ws-opts:
-    path: /168.138.171.70=23280
+    path: /
+    headers: {}
+- name: vless-13085626
+  type: vless
+  server: 104.21.12.63
+  port: 8443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  network: ws
+  tls: true
+  servername: index.arcane509.workers.dev
+  ws-opts:
+    path: /assets
     headers:
-      Host: aquilacalyx.qzz.io
-- name: 🏁RELAY-172.64.153.150-0470
-  type: vmess
-  server: 172.64.153.150
+      Host: index.arcane509.workers.dev
+- name: v2ray_configs_pool-373
+  type: vless
+  server: 27.50.48.114
+  port: 2083
+  uuid: 90235096-9296-3d36-c77c-715577598fd5
+  udp: true
+  network: ws
+  tls: true
+  servername: l.m.j.u.w.9.y.i.m.y.s.8.p.y.us.art-us.kdns.fr
+  ws-opts:
+    path: /glasspanel/0038ba35_0_1bdabe931208/
+    headers:
+      Host: l.m.j.u.w.9.y.i.m.y.s.8.p.y.us.art-us.kdns.fr
+- name: 🔥 @free_conf_iran 🔥 6
+  type: vless
+  server: 188.114.97.6
+  port: 8443
+  uuid: '@free_conf_iran'
+  udp: true
+  network: ws
+  tls: true
+  servername: fr.mamish.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fr.mamish.ir
+- name: '@npv_vpn11-9'
+  type: vless
+  server: 104.19.35.8
   port: 443
-  uuid: bf4619e4-01dc-48ca-be08-0976b54968ce
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🏁RELAY-104.21.83.208-2036
+  type: vmess
+  server: 104.21.83.208
+  port: 443
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
   ws-opts:
-    path: /dongtaiwang.com
+    path: /linkws
     headers:
-      Host: lg5.zhujicn2.com
-- name: 🇫🇷FR_110|136KB/s|M002-260618
+      Host: afrhms16v.bestxray.buzz
+- name: '@KAFING_2'
   type: vless
-  server: 172.64.147.104
+  server: 104.18.117.159
+  port: 443
+  uuid: 82241d60-2bdf-4de7-9a29-2d57ebc09b76
+  udp: true
+  network: ws
+  tls: true
+  servername: h18I2JaM-v6hTJQ-F-vwAI0PvGltC6On.hGhOrBAni-MC70.WoRkErS.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /eyJqdW5rIjoiSWVocjJHeWRvSGxYaThvIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
+    headers:
+      Host: h18i2jam-v6htjq-f-vwai0pvgltc6on.hghorbani-mc70.workers.dev
+- name: '@MDvpnSEC-New¹'
+  type: vless
+  server: 104.21.62.21
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: vless-296849783
+  type: vless
+  server: 104.17.17.167
+  port: 443
+  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  udp: true
+  network: ws
+  tls: true
+  servername: free-7f1.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: free-7f1.pages.dev
+- name: 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
+  type: vless
+  server: 104.21.40.208
+  port: 8443
+  uuid: 9047efd2-5aa4-4c9c-a58f-a5791b06c79e
+  udp: true
+  network: ws
+  tls: true
+  servername: ad-010.vector2llqn.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: ad-010.vector2llqn.info
+- name: By EbraSha 🧨
+  type: vless
+  server: 151.101.2.133
+  port: 443
+  uuid: 67678b11-99e5-445e-88c2-675005feaa49
+  udp: true
+  network: ws
+  tls: true
+  servername: live.989bull.com
+  client-fingerprint: firefox
+  ws-opts:
+    path: CHANNEL---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---ws/?ed=2048
+    headers:
+      Host: Golestanvpn.com
+- name: '@npv_vpn11-10'
+  type: vless
+  server: 162.159.0.3
+  port: 443
+  uuid: dd321f25-8f90-4e7c-a1fa-01883a8988a7
+  udp: true
+  network: ws
+  tls: true
+  servername: soucuovls.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /pyip=proxyip.cmliussss.netfp=random
+    headers:
+      Host: soucuovls.pages.dev
+- name: '@VConfing-2'
+  type: vless
+  server: 89.116.161.84
   port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
+  servername: support.zoom.us.yxls.eu.cc
   ws-opts:
-    path: /
+    path: /sg-melbi
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '@CUSTOMVPNSERVER'
+      Host: support.zoom.us.yxls.eu.cc
+- name: vless-13061665
   type: vless
-  server: 104.18.4.130
-  port: 8443
-  uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+  server: 104.21.64.250
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   network: ws
   tls: true
-  servername: r4fnviw9jl4i4rx.zjde5.de5.net
-  client-fingerprint: chrome
+  servername: index.arcane509.workers.dev
   ws-opts:
-    path: /XIXVPN?ed
+    path: /assets
     headers:
-      Host: r4fnviw9jl4i4rx.zjde5.de5.net
-- name: 🔵@chillguy_vpn-3
+      Host: index.arcane509.workers.dev
+- name: 'کانال تلگرام : Free_VPN_CH@-4'
   type: vless
-  server: 172.67.74.10
-  port: 443
-  uuid: 577699f7-468d-4b63-ae21-cdcdfd8d11c2
-  udp: true
-  network: ws
-  tls: true
-  servername: baguette.adaspoloandco.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GoorBah
-    headers:
-      Host: baguette.adaspoloandco.com
-- name: ✅ @ShadowSocks_S
-  type: vmess
-  server: 45.85.118.88
-  port: 8443
-  uuid: 9ae8b6c1-744f-4afe-c27d-f3b38e79d975
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: wg1.anothervmess.link
-  ws-opts:
-    path: /
-    headers:
-      Host: wg1.anothervmess.link
-- name: 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-2
-  type: vless
-  server: 192.200.160.8
-  port: 443
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  tls: true
-  servername: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: gj2rf.mlrb.tyr.hh.vavava.kdns.fr
-- name: 'کانال تلگرام : Free_VPN_CH@-3'
-  type: vless
-  server: 104.16.2.90
-  port: 443
-  uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-  udp: true
-  network: ws
-  tls: true
-  servername: ProxyVPN11.afrcloud22.mmv.kr
-  ws-opts:
-    path: /
-    headers:
-      Host: afrcloud22.mmv.kr
-- name: By EbraSha 🛡️
-  type: vless
-  server: 104.21.41.131
-  port: 8443
-  uuid: 1ad37675-b4cf-42fa-9dc5-83fd35cd63cb
-  udp: true
-  network: ws
-  tls: true
-  servername: ad-020.vector9nmb3.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: ad-020.vector9nmb3.info
-- name: 🏁RELAY-104.17.88.212-0528
-  type: vmess
-  server: 104.17.88.212
-  port: 443
-  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /glweidf.sbs/linkws
-    headers:
-      Host: worker-bitter-math-2af8.waxoha3621.workers.dev
-- name: 🇫🇷FR_131|362KB/s|M002-260618
-  type: vless
-  server: 172.64.53.140
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: v2rayng3-3
-  type: vless
-  server: 104.16.80.73
+  server: 46.202.30.8
   port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: Telegram
   udp: true
   network: ws
   tls: true
-  servername: sni.jpmj.dev
+  servername: tn1rr.qzz.io
   ws-opts:
-    path: /
+    path: /sg-lnd
     headers:
-      Host: sni.jpmj.dev
-- name: 👁️‍🗨️28@SHAHSERVER1
+      Host: tn1rr.qzz.io
+- name: '@npv_vpn11-11'
   type: vless
   server: 198.41.209.43
   port: 443
@@ -1321,23 +1011,106 @@ proxies:
     path: /sg-melbi
     headers:
       Host: support.zoom.us.yxls.eu.cc
-- name: '@v2rayng3-5'
+- name: 🪐 Zohal Server 🆓️
   type: vless
-  server: 45.130.125.76
-  port: 443
-  uuid: 99c8e30f-b39f-4917-b8cb-33265bf2976a
+  server: 104.16.148.244
+  port: 2087
+  uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5
   udp: true
   network: ws
   tls: true
-  servername: 7d3.sisshark.win
+  servername: 5-55sfjslf.ifenxiang.cfd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 5-55sfjslf.ifenxiang.cfd
+- name: 🎑🇦🇪AE
+  type: vless
+  server: 94.140.0.1
+  port: 443
+  uuid: 3a3de813-bfaa-4355-bc47-05c7245431d2
+  udp: true
+  network: ws
+  tls: true
+  servername: Australia.havray2025.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: Australia.havray2025.ir
+- name: '@npv_vpn11-12'
+  type: vless
+  server: 190.93.246.202
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: IR-@V2rayAlpha-5
+  type: vless
+  server: 185.16.110.238
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  network: ws
+  tls: true
+  servername: sni.jpmj.dev
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.jpmj.dev
+- name: '@icv2ray'
+  type: vless
+  server: 104.21.77.94
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: vless-15866820
+  type: vless
+  server: 172.67.214.106
+  port: 443
+  uuid: a8890c1b-3622-3106-c4be-d8671be32d2b
+  udp: true
+  network: ws
+  tls: true
+  servername: summer-meadow-af5b.woowoorrrkk.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sync
+    headers:
+      Host: summer-meadow-af5b.woowoorrrkk.workers.dev
+- name: '@MDvpnSec-New⁹'
+  type: vless
+  server: 172.67.181.232
+  port: 2083
+  uuid: 8d61925a-3210-4551-9bdb-bc78c5a8be7f
+  udp: true
+  network: ws
+  tls: true
+  servername: uwu.meowpew.de5.net
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: 7d3.sisshark.win
-- name: 🏁RELAY-104.26.13.72-0553
+      Host: uwu.meowpew.de5.net
+- name: 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
   type: vmess
-  server: 104.26.13.72
+  server: 23.162.200.227
   port: 443
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
@@ -1347,232 +1120,465 @@ proxies:
   tls: true
   ws-opts:
     path: /linkvws
-    headers:
-      Host: cake.capellare.com
-- name: 🇫🇷FR_208|173KB/s|M002-260618
+    headers: {}
+- name: By EbraSha 🚨
   type: vless
-  server: 172.64.52.97
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 151.101.194.219
+  port: 443
+  uuid: 20da741e-a156-455c-9650-478bc92fdaa9
   udp: true
   network: ws
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: api.speedtest.net
+  client-fingerprint: firefox
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: coo9youcatrsev.com
+- name: Alfred_Config-3
+  type: vless
+  server: 199.181.197.176
+  port: 443
+  uuid: AlfredConfig
+  udp: true
+  network: ws
+  tls: true
+  servername: alfi.yas-nowin.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: alfi.yas-nowin.ir
+- name: '@v2ray_configs_pools-join-us-on-Telegram'
+  type: vless
+  server: 172.67.157.231
+  port: 443
+  uuid: 66b3cbba-e6ac-485a-9201-976a0476eab9
+  udp: true
+  network: ws
+  tls: true
+  servername: eSeTSecUrityLiCEnsE.RqUGI.woRkErs.dEV
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+      Host: EseTSECuRItYLicEnsE.RQUGI.worKErs.dev
+- name: '@v2rayng3-2'
+  type: vless
+  server: 104.16.72.41
+  port: 443
+  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
+  udp: true
+  network: ws
+  tls: true
+  servername: shegeftihaaa.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rsedgws
+    headers:
+      Host: shegeftihaaa.net
+- name: '@MDvpnSec کانال ما'
+  type: vless
+  server: 104.26.9.48
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🇫🇷FR_687|260KB/s|C002-260622
+  type: vless
+  server: 104.21.53.160
+  port: 443
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  udp: true
+  network: ws
+  tls: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /js/cHlpcC55Z2tray5kcGRucy5vcmc=/?ed=2048
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: '@MDvpnSec-New⁷'
+  type: vless
+  server: 104.21.91.234
+  port: 2083
+  uuid: 8d61925a-3210-4551-9bdb-bc78c5a8be7f
+  udp: true
+  network: ws
+  tls: true
+  servername: uwu.meowpew.de5.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: uwu.meowpew.de5.net
+- name: '@npv_vpn11-13'
+  type: vless
+  server: 108.162.192.5
+  port: 443
+  uuid: dd321f25-8f90-4e7c-a1fa-01883a8988a7
+  udp: true
+  network: ws
+  tls: true
+  servername: soucuovls.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /pyip=proxyip.cmliussss.netfp=random
+    headers:
+      Host: soucuovls.pages.dev
+- name: 🪐 Zohal Server 🆓️-2
+  type: vless
+  server: 104.21.64.1
+  port: 443
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  udp: true
+  network: ws
+  tls: true
+  servername: pSycho.SueX12.Ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /Eujcp9ekQlNJr3cu?ed=2560flow=-udp443flow=-udp443
+    headers:
+      Host: psycho.suex12.ir
+- name: '@v2rayng3-3'
+  type: vless
+  server: 202.37.33.81
+  port: 443
+  uuid: 3b01a777-55e7-49f6-8637-d94ee69607c6
+  udp: true
+  network: ws
+  tls: true
+  servername: m.udemy.com.cyylr.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /id-tksi
+    headers:
+      Host: m.udemy.com.cyylr.eu.cc
+- name: v2rayng3
+  type: vless
+  server: 172.66.47.69
+  port: 2053
+  uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
+  udp: true
+  network: ws
+  tls: true
+  servername: qyi.fqjd663.ggff.net
+  ws-opts:
+    path: /
+    headers:
+      Host: qyi.fqjd663.ggff.net
+- name: '@npv_vpn11-14'
+  type: vless
+  server: 162.159.43.121
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🏁RELAY-104.17.21.154-0678
+  type: vmess
+  server: 104.17.21.154
+  port: 443
+  uuid: b503ef1f-aa59-4b96-8c24-8c995cba0e75
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: m3.v2rayfree1.xyz
+- name: CxrolVPN - Free (4)
+  type: vless
+  server: 104.21.16.1
+  port: 443
+  uuid: 81caa837-c213-4731-a02e-662380ad1e2f
+  udp: true
+  network: ws
+  tls: true
+  servername: cxrolvpn.freev2-edb.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /3BzRkDnEVV1LI56p?ed=2560
+    headers:
+      Host: cxrolvpn.freev2-edb.workers.dev
+- name: 🤴‼️ TELEGRAM@SHAHSERVER1🪽
+  type: vless
+  server: 69.46.46.17
+  port: 443
+  uuid: 939fdc89-ccc5-b335-3bb7-f21c14ef5a1f
+  udp: true
+  network: ws
+  tls: true
+  servername: x4g-production-e38b.up.railway.app
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws/939fdc89-ccc5-b335-3bb7-f21c14ef5a1f
+    headers:
+      Host: x4g-production-e38b.up.railway.app
+- name: 'کانال تلگرام : Free_VPN_CH@-5'
+  type: vless
+  server: 45.192.223.8
+  port: 2096
+  uuid: Telegram
+  udp: true
+  network: ws
+  tls: true
+  servername: tn1rr.qzz.io
+  ws-opts:
+    path: /sg-lnd
+    headers:
+      Host: tn1rr.qzz.io
+- name: '@npv_vpn11-15'
+  type: vless
+  server: 104.16.63.25
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?Telegram🇨🇳+@WangCai2=
+    headers:
+      Host: sni.111000.v6.navy
+- name: 🏁RELAY-188.114.97.113-0683
+  type: vmess
+  server: 188.114.97.113
+  port: 443
+  uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: v2fly.samrt.website
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇫🇷FR_168|159KB/s|M002-260618
-  - 🇨🇦139189 | ⚡️Telegram = t.me/SOSkeyNET
-  - 美国/San Francisco/United States/San Francisco-17
-  - '@v2ray_ng'
-  - By EbraSha 🛰️
-  - 🏁RELAY-172.67.170.13-0812
+  - By EbraSha 🧿
   - ❤️‍🔥 کانال تل
-  - 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 2ms
-  - 美国/San Francisco/United States/San Francisco-16
-  - '@KAFING_2'
-  - By EbraSha 📀
-  - 🇫🇷FR_83|192KB/s|M002-260618
-  - 🚀t.me/iProxyChannel
-  - vless-294288565
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 1ms
-  - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
-  - 🔵@chillguy_vpn
-  - 美国/San Francisco/United States/San Francisco-15
-  - '@v2rayng3'
-  - 🇫🇷FR_130|106KB/s|M002-260618
-  - '@ho3ino00👳🏽‍♂️ آخوندک'
   - vless-279513855
+  - '@Alirewa-354'
+  - 🇫🇷FR_765|369KB/s|C002-260622
+  - '@tootffarangi🍓-14'
+  - kurdconfig
+  - '@bored_vpn'
+  - '@VConfing'
+  - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
+  - 🏁RELAY-104.31.16.65-9006
+  - '@v2rayngzendegimamad🕊️'
+  - 🇺🇸 CxrolVPN
+  - vless-294288565
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-2
-  - '@v2rayng3-2'
-  - 🏁RELAY-172.67.204.84-0577
-  - 🇫🇷FR_194|525KB/s|M002-260618
-  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
-  - 美国/San Francisco/United States/San Francisco-14
-  - '@v2rayng3-3'
-  - By EbraSha 🌑
-  - 🏁RELAY-172.67.176.245-0702
-  - 🇫🇷FR_226|394KB/s|M002-260618
-  - 🇨🇦139196 | ⚡️Telegram = t.me/SOSkeyNET
-  - v2rayng3
-  - 🤖18@SHAHSERVER1
+  - Alfred_Config
+  - kurdconfig-2
+  - '@NormanConfig 💖'
+  - t.me/soheylFarzane 🕊️ irancell
+  - 🇫🇷FR_768|246KB/s|C002-260622
+  - '@npv_vpn11'
+  - 🏁RELAY-104.31.16.65-9003
+  - vless-13073485
+  - 🇫🇷FR_739|348KB/s|C002-260622
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-3
-  - 🏁RELAY-104.26.13.54-5904
-  - 🇫🇷FR_238|185KB/s|M002-260618
+  - '@npv_vpn11-2'
+  - 🏁RELAY-104.16.60.8-1151
   - 'کانال تلگرام : Free_VPN_CH@'
-  - 🤖15@SHAHSERVER1
-  - 荷兰/The Netherlands-3
-  - By EbraSha 🌐
-  - 🏁RELAY-104.21.9.21-0775
-  - 🇫🇷FR_113|412KB/s|A004-260618
-  - 'کانال تلگرام : Free_VPN_CH@-2'
-  - vless-38398
-  - 🆔ar14n24b 🔒 VL-WS-N/A 🇨🇦 CA 2ms
+  - '@SkyLiink_vpn 🇩🇪'
+  - vless-330534943
+  - 🇺🇸 AetrisVPN
+  - vpnsal
+  - '@npv_vpn11-3'
+  - '@v2rayng3'
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-4
-  - 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
-  - 美国/San Francisco/United States/San Francisco-11
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@
-  - 🇺🇸US-216.24.57.57-1838
-  - 🇬🇧GB_83|176KB/s|M003-260806
-  - 🔵@chillguy_vpn-2
-  - 美国/San Francisco/United States/San Francisco-10
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-2
-  - By EbraSha 🐺
-  - 🏁RELAY-188.114.96.58-1954
-  - 🇫🇷FR_181|118KB/s|M002-260618
-  - '@hopev2ray💕'
-  - '@v2ray_configs_pools-join-us-on-Telegram'
-  - '@v2ray_configs_pools-join-us-on-Telegram-2'
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-3
-  - 🇫🇷FR_195|360KB/s|A004-260618
-  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦-2
-  - 美国/San Francisco/United States/San Francisco-9
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-4
-  - By EbraSha 💣
-  - 🇫🇷FR_246|243KB/s|S001-260618
-  - '@skyliink_vpn丨چنل تلگرام 🇩🇪'
-  - 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 2ms
-  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
-  - 🇫🇷FR_263|334KB/s|T001-260618
-  - '@v2ray_configs_pools-join-us-on-Telegram-3'
-  - Arshiavpn12
-  - 🇭🇰HK-43.100.32.12-0268
-  - v2rayng3-2
-  - 🇫🇷FR_266|230KB/s|M002-260618
-  - '@Daily_Configs'
-  - 🇨🇦139191 | ⚡️Telegram = t.me/SOSkeyNET
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms
-  - 美国/San Francisco/United States/San Francisco-4
-  - 🇫🇷FR_267|466KB/s|M002-260618
-  - '@Daily_Configs-2'
-  - '@v2rayng3-4'
-  - 🏁RELAY-172.64.153.150-0470
-  - 🇫🇷FR_110|136KB/s|M002-260618
-  - '@CUSTOMVPNSERVER'
-  - 🔵@chillguy_vpn-3
-  - ✅ @ShadowSocks_S
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-2
+  - Alfred_Config-2
+  - '@npv_vpn11-4'
+  - 🏁RELAY-104.21.44.106-0770
+  - 🇪🇺 AetrisVPN
+  - '@Hope_Net-join-us-on-Telegram'
+  - 'کانال تلگرام : Free_VPN_CH@-2'
+  - '@npv_vpn11-5'
+  - '@V2rayi_net'
+  - 🇪🇺 AetrisVPN-2
+  - SG - zhuhai.uk
+  - By EbraSha 🪖
   - 'کانال تلگرام : Free_VPN_CH@-3'
-  - By EbraSha 🛡️
-  - 🏁RELAY-104.17.88.212-0528
-  - 🇫🇷FR_131|362KB/s|M002-260618
-  - v2rayng3-3
-  - 👁️‍🗨️28@SHAHSERVER1
-  - '@v2rayng3-5'
-  - 🏁RELAY-104.26.13.72-0553
-  - 🇫🇷FR_208|173KB/s|M002-260618
+  - '@npv_vpn11-6'
+  - 🏁RELAY-172.67.166.111-0982
+  - vless-296847779
+  - 🇺🇸 AetrisVPN-2
+  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
+  - '@npv_vpn11-7'
+  - 🏁RELAY-104.21.55.223-1057
+  - 🚀t.me/iProxyChannel
+  - 🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬
+  - Arshiavpn12
+  - '@npv_vpn11-8'
+  - 🇱🇹@V2rayng_Fast
+  - vless-13085626
+  - v2ray_configs_pool-373
+  - 🔥 @free_conf_iran 🔥 6
+  - '@npv_vpn11-9'
+  - 🏁RELAY-104.21.83.208-2036
+  - '@KAFING_2'
+  - '@MDvpnSEC-New¹'
+  - vless-296849783
+  - 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
+  - By EbraSha 🧨
+  - '@npv_vpn11-10'
+  - '@VConfing-2'
+  - vless-13061665
+  - 'کانال تلگرام : Free_VPN_CH@-4'
+  - '@npv_vpn11-11'
+  - 🪐 Zohal Server 🆓️
+  - 🎑🇦🇪AE
+  - '@npv_vpn11-12'
+  - IR-@V2rayAlpha-5
+  - '@icv2ray'
+  - vless-15866820
+  - '@MDvpnSec-New⁹'
+  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
+  - By EbraSha 🚨
+  - Alfred_Config-3
+  - '@v2ray_configs_pools-join-us-on-Telegram'
+  - '@v2rayng3-2'
+  - '@MDvpnSec کانال ما'
+  - 🇫🇷FR_687|260KB/s|C002-260622
+  - '@MDvpnSec-New⁷'
+  - '@npv_vpn11-13'
+  - 🪐 Zohal Server 🆓️-2
+  - '@v2rayng3-3'
+  - v2rayng3
+  - '@npv_vpn11-14'
+  - 🏁RELAY-104.17.21.154-0678
+  - CxrolVPN - Free (4)
+  - 🤴‼️ TELEGRAM@SHAHSERVER1🪽
+  - 'کانال تلگرام : Free_VPN_CH@-5'
+  - '@npv_vpn11-15'
+  - 🏁RELAY-188.114.97.113-0683
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷FR_168|159KB/s|M002-260618
-  - 🇨🇦139189 | ⚡️Telegram = t.me/SOSkeyNET
-  - 美国/San Francisco/United States/San Francisco-17
-  - '@v2ray_ng'
-  - By EbraSha 🛰️
-  - 🏁RELAY-172.67.170.13-0812
+  - By EbraSha 🧿
   - ❤️‍🔥 کانال تل
-  - 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 2ms
-  - 美国/San Francisco/United States/San Francisco-16
-  - '@KAFING_2'
-  - By EbraSha 📀
-  - 🇫🇷FR_83|192KB/s|M002-260618
-  - 🚀t.me/iProxyChannel
-  - vless-294288565
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 1ms
-  - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
-  - 🔵@chillguy_vpn
-  - 美国/San Francisco/United States/San Francisco-15
-  - '@v2rayng3'
-  - 🇫🇷FR_130|106KB/s|M002-260618
-  - '@ho3ino00👳🏽‍♂️ آخوندک'
   - vless-279513855
+  - '@Alirewa-354'
+  - 🇫🇷FR_765|369KB/s|C002-260622
+  - '@tootffarangi🍓-14'
+  - kurdconfig
+  - '@bored_vpn'
+  - '@VConfing'
+  - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬
+  - 🏁RELAY-104.31.16.65-9006
+  - '@v2rayngzendegimamad🕊️'
+  - 🇺🇸 CxrolVPN
+  - vless-294288565
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-2
-  - '@v2rayng3-2'
-  - 🏁RELAY-172.67.204.84-0577
-  - 🇫🇷FR_194|525KB/s|M002-260618
-  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
-  - 美国/San Francisco/United States/San Francisco-14
-  - '@v2rayng3-3'
-  - By EbraSha 🌑
-  - 🏁RELAY-172.67.176.245-0702
-  - 🇫🇷FR_226|394KB/s|M002-260618
-  - 🇨🇦139196 | ⚡️Telegram = t.me/SOSkeyNET
-  - v2rayng3
-  - 🤖18@SHAHSERVER1
+  - Alfred_Config
+  - kurdconfig-2
+  - '@NormanConfig 💖'
+  - t.me/soheylFarzane 🕊️ irancell
+  - 🇫🇷FR_768|246KB/s|C002-260622
+  - '@npv_vpn11'
+  - 🏁RELAY-104.31.16.65-9003
+  - vless-13073485
+  - 🇫🇷FR_739|348KB/s|C002-260622
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-3
-  - 🏁RELAY-104.26.13.54-5904
-  - 🇫🇷FR_238|185KB/s|M002-260618
+  - '@npv_vpn11-2'
+  - 🏁RELAY-104.16.60.8-1151
   - 'کانال تلگرام : Free_VPN_CH@'
-  - 🤖15@SHAHSERVER1
-  - 荷兰/The Netherlands-3
-  - By EbraSha 🌐
-  - 🏁RELAY-104.21.9.21-0775
-  - 🇫🇷FR_113|412KB/s|A004-260618
-  - 'کانال تلگرام : Free_VPN_CH@-2'
-  - vless-38398
-  - 🆔ar14n24b 🔒 VL-WS-N/A 🇨🇦 CA 2ms
+  - '@SkyLiink_vpn 🇩🇪'
+  - vless-330534943
+  - 🇺🇸 AetrisVPN
+  - vpnsal
+  - '@npv_vpn11-3'
+  - '@v2rayng3'
   - 🇸🇬 Join+Telegram:@SolVPN 🇸🇬-4
-  - 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
-  - 美国/San Francisco/United States/San Francisco-11
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@
-  - 🇺🇸US-216.24.57.57-1838
-  - 🇬🇧GB_83|176KB/s|M003-260806
-  - 🔵@chillguy_vpn-2
-  - 美国/San Francisco/United States/San Francisco-10
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-2
-  - By EbraSha 🐺
-  - 🏁RELAY-188.114.96.58-1954
-  - 🇫🇷FR_181|118KB/s|M002-260618
-  - '@hopev2ray💕'
-  - '@v2ray_configs_pools-join-us-on-Telegram'
-  - '@v2ray_configs_pools-join-us-on-Telegram-2'
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-3
-  - 🇫🇷FR_195|360KB/s|A004-260618
-  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦-2
-  - 美国/San Francisco/United States/San Francisco-9
-  - ❤️‍🔥 کانال تلگرام HiByeVPNN@-4
-  - By EbraSha 💣
-  - 🇫🇷FR_246|243KB/s|S001-260618
-  - '@skyliink_vpn丨چنل تلگرام 🇩🇪'
-  - 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 2ms
-  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
-  - 🇫🇷FR_263|334KB/s|T001-260618
-  - '@v2ray_configs_pools-join-us-on-Telegram-3'
-  - Arshiavpn12
-  - 🇭🇰HK-43.100.32.12-0268
-  - v2rayng3-2
-  - 🇫🇷FR_266|230KB/s|M002-260618
-  - '@Daily_Configs'
-  - 🇨🇦139191 | ⚡️Telegram = t.me/SOSkeyNET
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms
-  - 美国/San Francisco/United States/San Francisco-4
-  - 🇫🇷FR_267|466KB/s|M002-260618
-  - '@Daily_Configs-2'
-  - '@v2rayng3-4'
-  - 🏁RELAY-172.64.153.150-0470
-  - 🇫🇷FR_110|136KB/s|M002-260618
-  - '@CUSTOMVPNSERVER'
-  - 🔵@chillguy_vpn-3
-  - ✅ @ShadowSocks_S
-  - 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 2ms-2
+  - Alfred_Config-2
+  - '@npv_vpn11-4'
+  - 🏁RELAY-104.21.44.106-0770
+  - 🇪🇺 AetrisVPN
+  - '@Hope_Net-join-us-on-Telegram'
+  - 'کانال تلگرام : Free_VPN_CH@-2'
+  - '@npv_vpn11-5'
+  - '@V2rayi_net'
+  - 🇪🇺 AetrisVPN-2
+  - SG - zhuhai.uk
+  - By EbraSha 🪖
   - 'کانال تلگرام : Free_VPN_CH@-3'
-  - By EbraSha 🛡️
-  - 🏁RELAY-104.17.88.212-0528
-  - 🇫🇷FR_131|362KB/s|M002-260618
-  - v2rayng3-3
-  - 👁️‍🗨️28@SHAHSERVER1
-  - '@v2rayng3-5'
-  - 🏁RELAY-104.26.13.72-0553
-  - 🇫🇷FR_208|173KB/s|M002-260618
+  - '@npv_vpn11-6'
+  - 🏁RELAY-172.67.166.111-0982
+  - vless-296847779
+  - 🇺🇸 AetrisVPN-2
+  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
+  - '@npv_vpn11-7'
+  - 🏁RELAY-104.21.55.223-1057
+  - 🚀t.me/iProxyChannel
+  - 🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬
+  - Arshiavpn12
+  - '@npv_vpn11-8'
+  - 🇱🇹@V2rayng_Fast
+  - vless-13085626
+  - v2ray_configs_pool-373
+  - 🔥 @free_conf_iran 🔥 6
+  - '@npv_vpn11-9'
+  - 🏁RELAY-104.21.83.208-2036
+  - '@KAFING_2'
+  - '@MDvpnSEC-New¹'
+  - vless-296849783
+  - 𝗡𝗲𝗧𝗠𝗲𝗹𝗶⚡️-@prrofile_purple
+  - By EbraSha 🧨
+  - '@npv_vpn11-10'
+  - '@VConfing-2'
+  - vless-13061665
+  - 'کانال تلگرام : Free_VPN_CH@-4'
+  - '@npv_vpn11-11'
+  - 🪐 Zohal Server 🆓️
+  - 🎑🇦🇪AE
+  - '@npv_vpn11-12'
+  - IR-@V2rayAlpha-5
+  - '@icv2ray'
+  - vless-15866820
+  - '@MDvpnSec-New⁹'
+  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
+  - By EbraSha 🚨
+  - Alfred_Config-3
+  - '@v2ray_configs_pools-join-us-on-Telegram'
+  - '@v2rayng3-2'
+  - '@MDvpnSec کانال ما'
+  - 🇫🇷FR_687|260KB/s|C002-260622
+  - '@MDvpnSec-New⁷'
+  - '@npv_vpn11-13'
+  - 🪐 Zohal Server 🆓️-2
+  - '@v2rayng3-3'
+  - v2rayng3
+  - '@npv_vpn11-14'
+  - 🏁RELAY-104.17.21.154-0678
+  - CxrolVPN - Free (4)
+  - 🤴‼️ TELEGRAM@SHAHSERVER1🪽
+  - 'کانال تلگرام : Free_VPN_CH@-5'
+  - '@npv_vpn11-15'
+  - 🏁RELAY-188.114.97.113-0683
 rules:
 - MATCH,🚀 节点选择
